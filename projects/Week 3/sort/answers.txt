@@ -1,0 +1,6 @@
+sort1 uses: Bubble Sort
+How do you know?: The real time of running random numbers is the biggest one.
+sort2 uses: Merge Sort
+How do you know?: It is the fastest on the random and reversed numbers.
+sort3 uses: Selection Sort
+How do you know?: The real time of running is bigger than sort1.
