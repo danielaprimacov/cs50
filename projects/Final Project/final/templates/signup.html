@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sign Up
+{% endblock %}
+
+{% block body %}
+
+    <h1 class="page_title page_title--center">Sign Up</h1>
+
+    <form class="form form--auth" action="/signup" method="post">
+
+        <div class="form_group form_group--md">
+            <input type="text" class="form_control" id="username" name="username">Your Name
+            <span class="form_line"></span>
+        </div>
+
+        <div class="form_group form_group--md">
+            <input type="email" class="form_control" id="email" name="email">Your E-mail
+            <span class="form_line"></span>
+        </div>
+
+        <div class="form_group form_group--md">
+            <input type="password" class="form_control" id="password" name="password">Your Password
+            <span class="form_line"></span>
+        </div>
+
+        <div class="form_group form_group--md">
+            <input type="password" class="form_control" id="confirmation" name="confirmation">Confirm Password
+            <span class="form_line"></span>
+        </div>
+
+        <div class="form_footer form_footer--center">
+            <div class="form_group form_group--md">
+                <button class="btn btn--blue btn--rounded btn--small" type="submit">Sign Up</button>
+            </div>
+            <ul class="form_footer_list">
+                <li>
+                    <a href="/login">Log in</a>
+                </li>
+                <li>
+                    <a href="/restorepass">Restore password</a>
+                </li>
+            </ul>
+        </div>
+
+    </form>
+
+{% endblock %}

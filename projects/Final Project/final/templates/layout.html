@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <!-- Useful meta tags -->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="robots" content="index, follow">
+        <meta name="google" content="notranslate">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="description" content="">
+
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+
+        <div class="page" id="page">
+            <!--Header-->
+            <header class="header">
+                <div class="header_left">
+                    <nav class="nav">
+                        <ul class="nav_list">
+                            <li class="nav_item">
+                                <a class="nav_link" href="/">Home</a>
+                            </li>
+                            <li class="nav_item">
+                                <a class="nav_link has-subnav" href="/">Articles</a>
+
+                                <ul class="subnav">
+                                    <li class="nav_item">
+                                        <a class="subnav_link" href="/post">Coding</a>
+                                    </li>
+                                    <li class="nav_item">
+                                        <a class="subnav_link" href="/learn">Learn Computer Science</a>
+                                    </li>
+                                    <li class="nav_item">
+                                        <a class="subnav_link" href="">Web Development</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav_item">
+                                <a class="nav_link" href="/aboutme">About Me</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <button class="burger" type="button" id="sidebarToggle">
+                        <span>Open navigation</span>
+                    </button>
+                </div>
+
+                <div class="header_right">
+                    <nav class="nav">
+                        {% if session["user_id"] %}
+                        <ul class="nav_list">
+                            <li class="nav_item">
+                                <a class="nav_link" href="/profile">Profile</a>
+                            </li>
+                            <li class="nav_item">
+                                <a class="nav_link" href="/logout">Log out</a>
+                            </li>
+                        </ul>
+                            {% else %}
+                            <ul class="nav_list">
+                            <li class="nav_item">
+                                <a class="nav_link" href="/login">Log in</a>
+                            </li>
+                            <li class="nav_item">
+                                <a class="nav_link" href="/signup">Sign up</a>
+                            </li>
+                        </ul>
+                            {% endif %}
+                    </nav>
+
+                    <form class="search" action="/" method="post">
+                        <input class="search_input" type="text" placeholder="Search on Blog">
+                    </form>
+                </div>
+            </header>
+
+            <!--Sidebar-->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar_header">
+                    <img src="static/images/sidebar_header.jpg" alt="sidebar_header">
+                </div>
+                <div class="sidebar_body">
+                    <div class="profile">
+                        <img class="profile_avatar" src="static/images/profile.jpg" alt="">
+                        <div class="profile_header">
+                            <div class="profile_name">Daniela Primacov</div>
+                            <div class="profile_prof">Junior Web Developer</div>
+                        </div>
+
+                        <ul class="social">
+                            <li class="social_item">
+                                <a class="social_link" href="https://www.facebook.com/profile.php?id=100004358263484"
+                                    target="_blank">
+                                    <img src="static/images/facebook.svg" alt="Facebook">
+                                </a>
+                            </li>
+                            <li class="social_item">
+                                <a class="social_link" href="https://www.instagram.com/daniela_ureche/">
+                                    <img src="static/images/instagram.svg" alt="Instagram"></a>
+                            </li>
+                            <li class="social_item">
+                                <a class="social_link" href="https://www.linkedin.com/in/daniela-primacov-523778242/">
+                                    <img src="static/images/linkedin.svg" alt="Linkedin">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="profile_text">
+                            <p>A calculated and self-motivated team member, being responsible,
+                                disciplined and demonstrating the high interest for domain of
+                                Informational Technologies, especially Web Developing.</p>
+                        </div>
+                    </div>
+                    <!--profile-->
+                    <div id="nav_mob">
+
+                    </div>
+
+
+                </div>
+                <!--sidebar_body-->
+                <div class="sidebar_footer">
+                    <a class="btn btn--red" href="/works">My Projects</a>
+                    <button class="btn btn--blue" type="button" data-modal="contact_modal">Write Me</button>
+                </div>
+            </aside>
+            <!--End Sidebar-->
+
+            <!-- Main -->
+            <main class="main">
+                <div class="container">
+                    {% block body %}{% endblock %}
+                </div>
+            </main>
+        </div>
+
+        <!--Contact Modal -->
+        <div class="modal" id="contact_modal">
+            <div class="modal_content modal_content--contact">
+                <button class="modal_close" type="button">
+                    <img src="static/images/close_icon.svg" alt="Close">
+                </button>
+                <h1 class="modal_title">Have questions or suggestions? Type them! </h1>
+                <form class="form" action="/" method="post">
+
+                    <div class="form_group form_group--md">
+                        <input type="text" class="form_control" placeholder="Your Name">
+                        <span class="form_line"></span>
+                    </div>
+
+                    <div class="form_group form_group--md">
+                        <input type="email" class="form_control" placeholder="Your E-mail">
+                        <span class="form_line"></span>
+                    </div>
+
+                    <div class="form_group form_group--md">
+                        <textarea class="form_control form_control--textarea" placeholder="Message"></textarea>
+                        <span class="form_line"></span>
+                    </div>
+
+                    <div class="form_footer">
+                        <div class="form_group form_group--md">
+                            <button class="btn btn--blue btn--rounded btn--small" type="submit">Send</button>
+                        </div>
+                    </div>
+                </form>
+                <ul class="modal_footer">
+                    <li>email: <a href="mailto:daniela.primacov@yahoo.com">daniela.primacov@yahoo.com</a></li>
+                    <li><a href="tel:+491601449031">tel: +49-160-1449031</a></li>
+                </ul>
+
+            </div>
+            <!--Modal Content -->
+        </div>
+
+        <!-- Share Modal -->
+        <div class="modal" id="share_modal">
+            <div class="modal_content">
+                <button class="modal_close" type="button">
+                    <img src="static/images/close_icon.svg" alt="Close">
+                </button>
+                <h1 class="modal_title">Share on Social Sites!</h1>
+
+                <ul class="social">
+                    <li class="social_item">
+                        <a href="" class="social_link">
+                            <img class="modal_icon" src="static/images/share/facebook-share.svg" alt="Share on Facebook">
+                        </a>
+                    </li>
+
+                    <li class="social_item">
+                        <a href="" class="social_link">
+                            <img class="modal_icon" src="static/images/share/twiter-share.svg" alt="Share on Twiter">
+                        </a>
+                    </li>
+
+                    <li class="social_item">
+                        <a href="" class="social_link">
+                            <img class="modal_icon" src="static/images/share/messenger-share.svg" alt="Share on Messenger">
+                        </a>
+                    </li>
+
+                    <li class="social_item">
+                        <a href="" class="social_link">
+                            <img class="modal_icon" src="static/images/share/email-share.svg" alt="Share over email">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--Modal Content -->
+        </div>
+
+        <!--Story Modal-->
+        <div class="modal" id="story_modal">
+            <div clas="modal_content modal_content--story">
+                <video class="modal_video" poster="static/images/storie-1.jpg"></video>
+            </div>
+        </div>
+
+        <script>
+
+            // Modal Begin
+
+            const modalBtn = document.querySelectorAll('[data-modal]');
+            const body = document.body;
+            const modalClose = document.querySelectorAll('.modal_close');
+            const modal = document.querySelectorAll('.modal');
+
+            modalBtn.forEach(item => {
+                item.addEventListener('click', event => {
+                    let $this = event.currentTarget;
+                    let modalId = $this.getAttribute('data-modal');
+                    let modal = document.getElementById(modalId);
+                    let modalContent = modal.querySelectorAll('.modal_content');
+
+                    modalContent.forEach(item => {
+                        item.addEventListener('click', event => {
+                            event.stopPropagation();
+                        });
+                    });
+
+
+                    modal.classList.add('show');
+                    body.classList.add('no_scroll');
+
+                    setTimeout(() => {
+                        modalContent.forEach(item => {
+                            item.style.transform = 'none';
+                            item.style.opacity = '1';
+                        });
+                    }, 1);
+                });
+            });
+
+            modalClose.forEach(item => {
+                item.addEventListener('click', event => {
+                    let currentModal = event.currentTarget.closest('.modal');
+
+                    closeModal(currentModal);
+                });
+            });
+
+            modal.forEach(item => {
+                item.addEventListener('click', event => {
+                    let currentModal = event.currentTarget;
+
+                    closeModal(currentModal);
+                });
+            });
+
+            function closeModal(currentModal) {
+                let modalContent = currentModal.querySelectorAll('.modal_content');
+
+                modalContent.forEach(item => {
+                    item.removeAttribute('style');
+                });
+
+                setTimeout(() => {
+                    currentModal.classList.remove('show');
+                    body.classList.remove('no_scroll');
+                }, 200);
+            }
+            // Modal End
+
+            // Burger Begin
+
+            const sidebar = document.getElementById('sidebar');
+            const burger = document.getElementById('sidebarToggle');
+            const page = document.getElementById('page');
+
+            burger.addEventListener('click', event => {
+                if ( body.classList.contains('show-sidebar') ) {
+                    closeSidebar();
+                } else {
+                    showSidebar();
+                }
+            });
+
+            function showSidebar() {
+                let mask = document.createElement('div');
+                mask.classList.add('page_mask');
+                mask.addEventListener('click', closeSidebar);
+                page.appendChild(mask);
+
+                body.classList.add('show-sidebar');
+
+                document.getElementById('nav_mob').innerHTML =
+                '<nav class="nav nav--mobile">'
+                    +'<ul class="nav_list">'
+                        +'<li class="nav_item">'
+                            +'<a class="nav_link" href="/index">Home</a>'
+                        +'</li>'
+                        +'<li class="nav_item">'
+                            +'<a class="nav_link has-subnav" href="">Articles</a>'
+                            +'<ul class="subnav">'
+                                +'<li class="nav_item">'
+                                    +'<a class="subnav_link" href="">Coding</a>'
+                                +'</li>'
+                                +'<li class="nav_item">'
+                                    +'<a class="subnav_link" href="/">Learn Computer Science</a>'
+                                +'</li>'
+                                +'<li class="nav_item">'
+                                    +'<a class="subnav_link" href="">Web Development</a>'
+                                +'</li>'
+                            +'</ul>'
+                         +'</li>'
+                         +'<li class="nav_item">'
+                            +'<a class="nav_link" href="/aboutme">About Me</a>'
+                         +'</li>'
+                         + '{% if session["user_id"]%}'
+                         +'<li class="nav_item">'
+                            +'<a class="nav_link" href="/profile">Profile</a>'
+                        +'</li>'
+                        +'<li class="nav_item">'
+                            +'<a class="nav_link" href="/logout">Log Out</a>'
+                        +'</li>'
+                        + '{% else %}'
+                        +'<li class="nav_item">'
+                            +'<a class="nav_link" href="/login">Log In</a>'
+                        +'</li>'
+                        +'<li class="nav_item">'
+                            +'<a class="nav_link" href="/signup">Sign Up</a>'
+                        +'</li>'
+                        + '{% endif %}'
+                    +'</ul>'
+                +'</nav>';
+                }
+
+                function closeSidebar() {
+                    body.classList.remove('show-sidebar');
+                    document.querySelector('.page_mask').remove();
+                    document.getElementById('nav_mob').remove();
+                }
+
+            // Burger End
+
+
+            // Textarea automate resize Begin
+            const textArea = document.querySelectorAll('[data-autoresize]');
+
+            textArea.forEach(item => {
+                let textAreaH = item.offsetHeight;
+
+                item.addEventListener('input', event => {
+                    let $this = event.currentTarget;
+
+                    $this.style.height = textAreaH + 'px';
+                    $this.style.height = $this.scrollHeight + 'px';
+                });
+            });
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block body %}
+
+    <h1 class="page_title page_title--center">Log In</h1>
+
+    <form class="form form--auth" action="/login" method="post">
+
+        <div class="form_group form_group--md">
+            <input type="email" class="form_control" name="email">Your E-mail
+            <span class="form_line"></span>
+        </div>
+
+        <div class="form_group form_group--md">
+            <input type="password" class="form_control" name="password">Your Password
+            <span class="form_line"></span>
+        </div>
+
+        <div class="form_footer form_footer--center">
+            <div class="form_group form_group--md">
+                <button class="btn btn--blue btn--rounded btn--small" type="submit">Log In</button>
+            </div>
+            <ul class="form_footer_list">
+                <li>
+                    <a href="/signup">Sign up</a>
+                </li>
+                <li>
+                    <a href="/restorepass">Restore password</a>
+                </li>
+            </ul>
+        </div>
+
+    </form>
+
+{% endblock %}

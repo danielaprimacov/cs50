@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block body %}
+
+<h1 class="page_title">My Profile</h1>
+
+<form action="/" class="form" method="post">
+    <div class="cabinet">
+        <div class="cabinet_form">
+            <div class="form_group form_group--md">
+                <input type="text" class="form_control" placeholder="Your Name" value="Daniela Primacov">
+                <span class="form_line"></span>
+            </div>
+
+            <div class="form_group form_group--md">
+                <input type="email" class="form_control" placeholder="Your E-mail" value="daniela.primacov@yahoo.com">
+                <span class="form_line"></span>
+            </div>
+
+            <div class="form_group form_group--md">
+                <input type="password" class="form_control" placeholder="New Password">
+                <span class="form_line"></span>
+            </div>
+
+            <div class="form_group form_group--md">
+                <input type="password" class="form_control" placeholder="Repeat Password">
+                <span class="form_line"></span>
+            </div>
+        </div>
+
+        <div class="cabinet_avatar">
+            <img src="static/images/cabinet_avatar.jpg" alt="Profile Avatar">
+
+            <label class="cabinet_file">
+                <input type="file">Choose file
+            </label>
+        </div>
+    </div>
+    <div class="form_footer">
+        <button class="btn btn--blue btn--rounded btn--small" type="submit">Save</button>
+    </div>
+</form>
+
+{% endblock %}

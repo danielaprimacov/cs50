@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            const rightLabel1 = '1997';
+            const rightLabel2 = '100 Liter Bier';
+            // Run script DOM is loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                // Get the buttons
+                let btnCorrect = document.querySelector('#correct');
+                let btnWrong = document.querySelectorAll('#wrong');
+                // Add onClick function when it is correct or wrong answer
+                btnCorrect.addEventListener('click', function onClick() {
+                    btnCorrect.style.background = 'green';
+                    document.querySelector('#ans').innerHTML = 'Correct!';
+                    document.querySelector('#ans').style.color = 'green';
+                });
+                for (let i = 0; i < btnWrong.length; i++) {
+                    btnWrong[i].addEventListener('click', function onClick() {
+                        btnWrong[i].style.background = 'red';
+                        document.querySelector('#ans').innerHTML = 'Incorrect!';
+                        document.querySelector('#ans').style.color = 'red';
+                    });
+                }
+                // Check the answer
+                let userInput = document.querySelector('#userInp');
+                let btnCheck = document.querySelector('#btnCheck');
+                btnCheck.addEventListener('click', function onClick() {
+                    if (userInput.value === rightLabel2) {
+                        userInput.style.background = 'green';
+                        document.querySelector('#answer').innerHTML = 'Correct!';
+                        document.querySelector('#answer').style.color = 'green';
+                    }
+                    else {
+                        userInput.style.background = 'red';
+                        document.querySelector('#answer').innerHTML = 'Incorrect!';
+                        document.querySelector('#answer').style.color = 'red';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Harry Potter und der Stein der Weisen wurde erstmals von Bloomsbury in Großbritannien im ... veröffentlicht</h3>
+                <button type="submit" id="wrong">1995</button>
+                <button type="submit" id="wrong">1996</button>
+                <button type="submit" id="correct">1997</button> <!--Richtig-->
+                <button type="submit" id="wrong">1998</button>
+                <p id="ans"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Wie viele Liter Bier werden in Deutschland pro Kopf jährlich getrunken?</h3>
+                <input type="text" id="userInp"> <!--100 Liter Bier-->
+                <button type="submit" id="btnCheck">Prüfe die Antwort</button>
+                <p id="answer"></p>
+            </div>
+        </div>
+    </body>
+</html>

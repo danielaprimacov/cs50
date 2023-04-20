@@ -1,0 +1,181 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Bootcamp
+{% endblock %}
+
+{% block body %}
+
+<article class="post">
+    <div class="post_action">
+        <a href="/">Go Back</a>
+        <a href="#" data-modal="share_modal">
+            Share
+            <img class="post_action_icon" src="static/images/share.svg" alt="Share">
+        </a>
+    </div>
+    <div class="post_header post_header--open">
+        <h2 class="post_title post_title--open">
+            How to start to code?
+        </h2>
+        <ul class="post_data">
+            <li class="post_data_item">
+                <time datetime="2023-03-30">30.03.2023</time>
+            </li>
+            <li class="post_data_item">
+                <a href="#">Coding</a>
+            </li>
+        </ul>
+    </div>
+    <div class="post_content">
+        <div class="post_text">
+            <p>Transforming your professional outlook can be quick and easy thanks to bootcamps. We are talking about specialised intensive training that covers different branches of the digital sector. It lasts for around two months on average, has a practical focus, and seeks to cover employers' demand for labour. In addition, it does not require previous qualifications.</p>
+            <p>
+                <img src="https://www.iberdrola.com/documents/20125/40558/bootcamps_746x419.jpg/36b081fe-8305-4d59-93ed-efcce058443c?t=1627457314249" alt="Programming">
+            </p>
+            <h2 class="post_title post_title--open">What is a Bootcamp</h2>
+            <p>The origin of the concept is in a method used by the American armed forces to train troops that relied on working at a high intensity to achieve the best performance in a short period. Returning to the technological aspect, this type of intensive training teaches the necessary knowledge about a specific technological specialisation widely demanded in the labour market. How do you achieve such optimal training in such a short time? The keys are small classes, a concentrated agenda and a total immersion based on practice.</p>
+            <p>There are numerous types of bootcamps related to the development of different digital skills. Let's take a look at some of them: UX/UI Design (user experience and interface design), Full Stack Developer (programming in back end and front end environments), Data Science (data analysis for decision making), Mobile Development (programming for mobile devices), Product Management (management of technological products), Digital Marketing (marketing in the digital ecosystem), etc.</p>
+
+            <p>
+                <img src="https://www.iberdrola.com/documents/20125/40558/beneficios_bootcamps_EN.jpg/0a6f3c70-1022-3fe6-ecdd-502cbbf81af7?t=1627457318072" alt="Benefits of Bootcamp">
+            </p>
+
+            <h2 class="post_title post_title--mb0">What are the best Bootcamps in the World?</h2>
+            <p>Programming has become essential in any field, sector or industry in this digital era and, therefore, it is the great star of bootcamps. SwitchUp, the leading American platform for computer programming and online coding, has published its <a href="https://www.switchup.org/rankings/best-coding-bootcamps" target="_blank">ranking</a>ranking, opens in new window. of the five best schools and courses for programming bootcamps for 2021:</p>
+
+            <ol>
+                <li> Skylab Coders Academy (Barcelona). Web Development Bootcamp with Javascript.</li>
+                <li> La Capsule (Lion, Marseilles, Paris). Full Stack JavaScript Web Developer.</li>
+                <li>
+                    Academy Code Lab (Portland). Developer 101: Intro to Web Developer Tools and Technologies, Professional Software Development in Advanced Full Stack JavaScript.
+                </li>
+                <li>
+                    Tech Elevator (Cleveland, Columbus, Cincinnati, Pittsburgh, Philadelphia, Detroit, Charlotte, Chicago and online). Java Coding Bootcamp, .NET Coding Bootcamp.
+                </li>
+                <li>
+                    Codeworks (Barcelona, Berlin, London, Toronto and online). Software Engineering Immersive.
+                </li>
+            </ol>
+
+            <!--
+
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+
+            <ol>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ol>
+
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </table>
+
+        -->
+        <a href="https://www.iberdrola.com/talent/what-is-bootcamp" target="_blank">Source of information</a>
+        </div>
+        <!--End Post Text-->
+        <div class="related">
+            <h3 class="post_subtitle">Another related topics</h3>
+            <ul class="related_list">
+                <li class="related_list_item">
+                    <h4 class="related_list_title">
+                        <a href="/post">How to start to code?</a>
+                    </h4>
+                    <time class="related_list_date" datetime="2023-03-31">31.03.2023</time>
+                </li>
+                <li class="related_list_item">
+                    <h4 class="related_list_title">
+                        <a href="#">About Bootcamps</a>
+                    </h4>
+                    <time class="related_list_date" datetime="2023-03-30">30.03.2023</time>
+                </li>
+                <li class="related_list_item">
+                    <h4 class="related_list_title">
+                        <a href="/learn">Tips to Learn Computer Programming Faster!</a>
+                    </h4>
+                    <time class="related_list_date" datetime="2023-03-31">31.03.2023</time>
+                </li>
+                <li class="related_list_item">
+                    <h4 class="related_list_title">
+                        <a href="#">Web Frameworks. The Best Frameworks to Use</a>
+                    </h4>
+                    <time class="related_list_date" datetime="2023-03-30">30.03.2023</time>
+                </li>
+            </ul>
+        </div> <!-- End Related-->
+
+        <!-- Comments -->
+        <h3 class="comments_title">Add a Comments</h3>
+
+        <form class="form" action="/" method="post">
+            <div class="form_group">
+                <textarea class="form_control form_control--textarea" name="comment-text"
+                    placeholder="Your Comment" data-autoresize></textarea>
+                <span class="form_line"></span>
+            </div>
+            <button class="btn btn--blue btn--rounded btn--small" type="submit">Send</button>
+        </form>
+
+
+        <!--Show Comments -->
+        <ul class="comments">
+            <li class="comments_item">
+                <div class="comments_header">
+                    <img class="comments_avatar" src="static/images/utiutiu.jpg" alt="Maxim Primacov">
+                    <div class="comments_author">
+                        <div class="comments_name">Maxim Primacov</div>
+                        <time class="comments_pubdate" datetime="2023-04-01">One hour ago</time>
+                    </div>
+                </div>
+                <div class="comments_text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente earum itaque excepturi atque
+                    commodi quasi at hic quaerat voluptas amet. Voluptate qui dolore, dolorem rem praesentium eaque
+                    mollitia architecto esse.
+                </div>
+                <button class="comments_reply" type="button">Answer</button>
+
+                <!--Answer Comment-->
+                <ul class="comments">
+                    <li class="comments_item">
+                        <div class="comments_header">
+                            <img class="comments_avatar" src="static/images/profile.jpg" alt="Daniela Primacov">
+                            <div class="comments_author">
+                                <div class="comments_name">Daniela Primacov</div>
+                                <time class="comments_pubdate" datetime="2023-04-01">5 min ago</time>
+                            </div>
+                        </div>
+                        <div class="comments_text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente earum itaque excepturi
+                            atque
+                            commodi quasi at hic quaerat voluptas amet. Voluptate qui dolore, dolorem rem praesentium
+                            eaque
+                            mollitia architecto esse.
+                        </div>
+                        <button class="comments_reply" type="button">Answer</button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!--End Show Comments -->
+    </div>
+    <!-- End Comments-->
+
+    </div>
+    <!--End Post Content -->
+
+
+</article>
+<!-- End Post -->
+
+
+{% endblock%}

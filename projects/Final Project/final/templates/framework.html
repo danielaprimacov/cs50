@@ -1,0 +1,256 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Framework
+{% endblock %}
+
+{% block body %}
+
+<article class="post">
+    <div class="post_action">
+        <a href="/">Go Back</a>
+        <a href="#" data-modal="share_modal">
+            Share
+            <img class="post_action_icon" src="static/images/share.svg" alt="Share">
+        </a>
+    </div>
+    <div class="post_header post_header--open">
+        <h2 class="post_title post_title--open">
+            Web Frameworks. The Best Frameworks to Use
+        </h2>
+        <ul class="post_data">
+            <li class="post_data_item">
+                <time datetime="2023-03-30">30.03.2023</time>
+            </li>
+            <li class="post_data_item">
+                <a href="#">Web Development</a>
+            </li>
+        </ul>
+    </div>
+    <div class="post_content">
+        <div class="post_text">
+            <h2 class="post_title post_title--open">Best Backend Frameworks</h2>
+            <p>Frameworks have become an essential part of web development, as the standards of web applications are always rising, so does the complexity of the technology needed. It's completely unreasonable to reinvent the wheel for such sophisticated techniques -assuming that you can reinvent all that. That's why using frameworks endorsed by thousands of developers around the world is a very sensible approach for building rich and interactive web applications. A web app has a backend (server-side) and a frontend (client-side), so we discuss both best Backend frameworks as well as frontend frameworks.</p>
+            <p>From RESTful APIs to complete MVC frameworks, here are some of the most robust backend frameworks in 2023 that you might be interested to learn.</p>
+            <h3>1. Express</h3>
+            <p>
+                <img src="https://hackr.io/blog/media/expressjs.png" alt="express">
+            </p>
+            <p>Thanks to the skyrocketing popularity of Node.js, Express is quickly becoming one of the most trending best framework for web development nowadays. It is popular amongst Accenture, IBM and Uber, and many other companies, and it's also compatible with other frameworks such as Kraken, Sails, and Loopback.</p>
+            <p>Express prides itself as a minimal, fast, and unopinionated framework. It provides some core framework functionalities without obscuring the features of Node and leverages the robust performance of the asynchronous Node.js. It's also quite flexible and supports full applications as well as REST API, as well. Perhaps the biggest drawback of Express is the fact that there's no defined way of doing things, at least for beginners.</p>
+
+            <h3>2. Django</h3>
+            <p>
+                <img src="https://hackr.io/blog/media/django.png" alt="django">
+            </p>
+            <p>Django is a Model-View-Template framework that uses Python for web development. Big names such as Google, Youtube, and Instagram use this framework. Django boasts its batteries-included feature, which is a bunch of features such as authentication and messaging that Django has. It follows the Convention Over Configuration pattern and the DRY pattern as well. Security in Django is essential. Django provides techniques and tools for developers to build a secure website or implements the security features in the framework itself, like preventing code execution in the template layer. Here is our detailed post on Django: What is Django? Advantages and Disadvantages of using Django</p>
+
+            <h3>3. Rails</h3>
+            <p>
+                <img src="https://hackr.io/blog/media/ruby-on-rails.jpg" alt="rails">
+            </p>
+            <p>Rails is a Model-View-Controller framework that uses Ruby, and it's a popular framework that is loved by many developers. Airbnb, GitHub, Hulu, and Shopify are primary users of Rails. Rails is considered a beginner-friendly framework, and the fact pros and cons are debated, helps beginners get started with web development quite quickly. There are many useful gems for rails, which are library-like dependencies that extend the functionalities of your application and helps you develop even faster and more efficiently. The Rails community is quite reliable and friendly, and there are many tutorials, screencasts, and resources that can help you become a rails expert in no time.</p>
+            <p>The main disadvantage of rails lies in the fact that they take quite some effort to deploy and run in a production environment, and the learning curve of rails becomes steep once you dive deeper into the framework to unravel the magic behind it.</p>
+
+            <h3>4. Laravel</h3>
+            <p>
+                <img src="https://hackr.io/blog/media/laravel.jpg" alt="laravel">
+            </p>
+            <p>Laravel is a Model-View-Controller framework that uses PHP, which is one of the most popular languages of the web. It's relatively young compared to other frameworks on this list.</p>
+            <p>Laravel comes with API support out of the box, and it also possesses a decent amount of packages that could extend its reach. Laracasts is a screencasts tutorials website with over a thousand videos on PHP, Laravel, and frontend technologies in the Laravel ecosystem that could be considered to be a beginner's heaven. In terms of performance, however, Laravel doesn't compare to Django or Express, which might be a drawback for massive projects.</p>
+
+            <h3>5. Spring</h3>
+            <p>
+                <img src="https://hackr.io/blog/media/spring-framework-1.png" alt="spring">
+            </p>
+            <p>Spring is a Model-View-Controller framework that uses Java, the all-time popular language. Websites like Wix, TicketMaster, and BillGuard are users of this framework. Spring possesses many sister projects that boost its performance and let you scale your business quickly. The fact that it uses Java, a strongly typed language, is a severe pro to many web developers. The learning curve might be quite steep tho, especially if you don't know Java.</p>
+
+
+            <h2>Frontend Javascript Frameworks</h2>
+            <h3>6. Angular</h3>
+            <p>
+                <img src="https://hackr.io/blog/media/angular-1.png" alt="angular">
+            </p>
+            <p>Angular is a front-end framework that specializes in building rich Single-Page applications. It's a vibrant framework able to build complete client-side applications, and there's so much to do and learn in Angular. Angular 1.x used Javascript, but later releases adopted Typescript, which is a superset of Javascript. Angular's main cons are its size compared to other frameworks, and the fact it's not SEO friendly by nature, though it can be SEO optimized. Google developed angular, and Google, Microsoft, and Paypal use it.</p>
+
+            <h3>7. React</h3>
+            <p>
+                <img src="https://hackr.io/blog/media/react-3.png" alt="react">
+            </p>
+            <p>React is not a framework, it's a frontend library, but many developers consider it a framework and it's usually compared in that context. React was the first to adopt the component-based architecture that Angular and Vue, and many other frameworks started to adopt later on. React's virtual dom makes the dom-manipulation much faster, and it's quite easy to pick up, mainly thanks to its JSX syntax. React could be used server-side or client-side. It was developed and maintained by Facebook, and Facebook and Instagram use it.</p>
+
+            <h3>8. Vue</h3>
+            <p>
+                <img src="https://hackr.io/blog/media/vuejs.png" alt="vue">
+            </p>
+            <p>Vue.js is the new rising star; it started as an individual project and quickly grew into becoming one of the most trending JS frameworks out there. There are many cool things about Vue. First, it's a progressive framework, which means that if you have an existing project, you can adopt Vue for one portion of the project, and everything would work just fine. Second, it also brings along the component architecture to play, and the Vue ecosystem can help you build complete frontend applications. Some people are wary of using Vue since big companies like Facebook or Google do not support it, but that's quickly changing as big names are starting to invest in Vue.</p>
+
+
+            <h3>9. Ember</h3>
+            <p>
+                <img src="https://hackr.io/blog/media/ember-1.png" alt="ember">
+            </p>
+            <p>Ember was named the best Javascript framework back in 2015. Today, the Ember community is enormous, and it's ever-expanding, with new features, and releases added regularly. Ember possesses the two-way data binding that Angular boasts, and it comes with a lot of features and components that you can use out of the box. Google, Microsoft, Heroku, and Netflix use this framework often. Ember revolves around the developer's productivity and attempts to maximize it by either eliminating the need for time-wasting activities or adopting some JS best practices in its core design.</p>
+
+
+            <h3>10. Backbone</h3>
+            <p>
+                <img src="https://hackr.io/blog/media/backbone-1.jpg" alt="backbone">
+            </p>
+            <p>Backbone is an extremely light front-end framework that's fit for building rich Single-Page applications. It follows an MV* pattern and partly implements the MVC design. Backbone only has one core dependency, which is the Underscore library, and it has a vibrant ecosystem, that when added to Mustache and Marionette, allows you to build complete client-side applications.</p>
+
+            <h3>Conclusion</h3>
+            <p>I hope you find our list of <a href="https://digitalya.co/blog/best-web-development-frameworks/" target="_blank">most popular web frameworks</a> useful. Don't be scared to pick up a framework and start working on it, it gives you an insight into how to do things, and you'll find many similarities between frameworks, even across different languages in the same category. Remember that big companies are always migrating and trying new stuff all the time, so there’s no such thing as a dead end.</p>
+
+            <!--
+
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+
+            <ol>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ol>
+
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </table>
+
+        -->
+        <a href="https://hackr.io/blog/web-development-frameworks" target="_blank">Source of information</a>
+        </div>
+        <!--End Post Text-->
+        <div class="related">
+            <h3 class="post_subtitle">Another related topics</h3>
+            <ul class="related_list">
+                <li class="related_list_item">
+                    <h4 class="related_list_title">
+                        <a href="/post">How to start to code?</a>
+                    </h4>
+                    <time class="related_list_date" datetime="2023-03-31">31.03.2023</time>
+                </li>
+                <li class="related_list_item">
+                    <h4 class="related_list_title">
+                        <a href="/learn">Tips to Learn Computer Programming Faster!</a>
+                    </h4>
+                    <time class="related_list_date" datetime="2023-03-31">31.03.2023</time>
+                </li>
+                <li class="related_list_item">
+                    <h4 class="related_list_title">
+                        <a href="/bootcamp">About Bootcamps</a>
+                    </h4>
+                    <time class="related_list_date" datetime="2023-03-30">30.03.2023</time>
+                </li>
+                <li class="related_list_item">
+                    <h4 class="related_list_title">
+                        <a href="/framework">Web Frameworks. The Best Frameworks to Use</a>
+                    </h4>
+                    <time class="related_list_date" datetime="2023-03-30">30.03.2023</time>
+                </li>
+            </ul>
+        </div> <!-- End Related-->
+
+        <!-- Comments -->
+        <h3 class="comments_title">Add a Comments</h3>
+
+        <form class="form" action="/" method="post">
+            <div class="form_group">
+                <textarea class="form_control form_control--textarea" name="comment-text"
+                    placeholder="Your Comment"></textarea>
+                <span class="form_line"></span>
+            </div>
+            <button class="btn btn--blue btn--rounded btn--small" type="submit">Send</button>
+        </form>
+
+
+        <!--Show Comments -->
+        <ul class="comments">
+            <li class="comments_item">
+                <div class="comments_header">
+                    <img class="comments_avatar" src="static/images/utiutiu.jpg" alt="Maxim Primacov">
+                    <div class="comments_author">
+                        <div class="comments_name">Maxim Primacov</div>
+                        <time class="comments_pubdate" datetime="2023-04-01">Yesterday</time>
+                    </div>
+                </div>
+                <div class="comments_text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente earum itaque excepturi atque
+                    commodi quasi at hic quaerat voluptas amet. Voluptate qui dolore, dolorem rem praesentium eaque
+                    mollitia architecto esse.
+                </div>
+                <button class="comments_reply" type="button">Answer</button>
+
+                <!--Answer Comment-->
+                <ul class="comments">
+                    <li class="comments_item">
+                        <div class="comments_header">
+                            <img class="comments_avatar" src="static/images/profile.jpg" alt="Daniela Primacov">
+                            <div class="comments_author">
+                                <div class="comments_name">Daniela Primacov</div>
+                                <time class="comments_pubdate" datetime="2023-04-01">5 min ago</time>
+                            </div>
+                        </div>
+                        <div class="comments_text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente earum itaque excepturi
+                            atque
+                            commodi quasi at hic quaerat voluptas amet. Voluptate qui dolore, dolorem rem praesentium
+                            eaque
+                            mollitia architecto esse.
+                        </div>
+                        <button class="comments_reply" type="button">Answer</button>
+                        <ul class="comments">
+                            <li class="comments_item">
+                                <div class="comments_header">
+                                    <img class="comments_avatar" src="static/images/utiutiu.jpg" alt="Maxim Primacov">
+                                    <div class="comments_author">
+                                        <div class="comments_name">Maxim Primacov</div>
+                                        <time class="comments_pubdate" datetime="2023-04-01">Yesterday</time>
+                                    </div>
+                                </div>
+                                <div class="comments_text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente earum itaque excepturi atque
+                                    commodi quasi at hic quaerat voluptas amet. Voluptate qui dolore, dolorem rem praesentium eaque
+                                    mollitia architecto esse.
+                                </div>
+                                <button class="comments_reply" type="button">Answer</button>
+                    </li>
+                </ul>
+            </li>
+            <ul class="comments">
+                <li class="comments_item">
+                    <div class="comments_header">
+                        <img class="comments_avatar" src="static/images/utiutiu.jpg" alt="Maxim Primacov">
+                        <div class="comments_author">
+                            <div class="comments_name">Maxim Primacov</div>
+                            <time class="comments_pubdate" datetime="2023-04-01">One hour ago</time>
+                        </div>
+                    </div>
+                    <div class="comments_text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente earum itaque excepturi atque
+                        commodi quasi at hic quaerat voluptas amet. Voluptate qui dolore, dolorem rem praesentium eaque
+                        mollitia architecto esse.
+                    </div>
+                    <button class="comments_reply" type="button">Answer</button>
+                </li>
+        </ul>
+        <!--End Show Comments -->
+    </div>
+    <!-- End Comments-->
+
+    </div>
+    <!--End Post Content -->
+
+
+</article>
+<!-- End Post -->
+
+
+{% endblock %}

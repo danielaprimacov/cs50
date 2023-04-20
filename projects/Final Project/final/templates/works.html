@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Works
+{% endblock %}
+
+{% block body %}
+
+<h1 class="page_title">My Works</h1>
+
+<!-- Works Begin -->
+<article class="work">
+    <div class="work_preview">
+        <picture>
+            <source srcset="static/images/camping.jpg" media="(max-width: 575px)">
+            <img src="static/images/camp.jpg" alt="Camp Suchen">
+        </picture>
+    </div>
+    <div class="work_content">
+        <h2 class="work_title">
+            <a href="" target="_blank">CampSuchen</a>
+        </h2>
+
+        <div class="work_description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic similique velit atque nemo eveniet,
+                repudiandae inventore iusto veniam est accusantium adipisci nihil at tempora blanditiis quis nobis illo
+                ullam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem temporibus necessitatibus sunt
+                quam quibusdam nam asperiores possimus! Possimus ex, esse accusantium ipsam porro architecto quia,
+                deserunt provident delectus quae eligendi.</p>
+        </div>
+
+        <ul class="tags">
+            <li class="tags_item">design</li>
+            <li class="tags_item">search for a camp</li>
+            <li class="tags_item">map</li>
+        </ul>
+
+        <div class="work_footer">
+            <a class="btn btn--blue btn--rounded btn--small" href="" target="_blank">Go to site</a>
+        </div>
+    </div>
+</article>
+
+<article class="work">
+    <div class="work_preview">
+        <picture>
+            <source src="static/images/coddding.jpg" media="(max-width: 575px)">
+            <img src="static/images/work.jpg" alt="Another Work">
+        </picture>
+    </div>
+    <div class="work_content">
+        <h2 class="work_title">
+            <a href="" target="_blank">Website</a>
+        </h2>
+
+        <div class="work_description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic similique velit atque nemo eveniet,
+                repudiandae inventore iusto veniam est accusantium adipisci nihil at tempora blanditiis quis nobis illo
+                ullam?</p>
+        </div>
+
+        <ul class="tags">
+            <li class="tags_item">design</li>
+            <li class="tags_item">database</li>
+            <li class="tags_item">SMM</li>
+            <li class="tags_item">responsive</li>
+        </ul>
+
+        <div class="work_footer">
+            <a class="btn btn--blue btn--rounded btn--small" href="" target="_blank">Go to site</a>
+        </div>
+    </div>
+</article>
+
+<!-- Works End -->
+
+{% endblock %}

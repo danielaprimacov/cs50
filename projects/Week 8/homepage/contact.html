@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html">Portfolio</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Me</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="projects.html">My Projects</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <main>
+            <h1 class="text-primary">Contact Me</h1>
+            <div class="main-contact">
+                <div class="navigation active">
+                    <span style="--i:0;--x:-1;--y:0;">
+                      <a rel="facebookpage" href="https://www.facebook.com/profile.php?id=100004358263484">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                      </a>
+                    </span>
+                    <span style="--i:1;--x:1;--y:0;">
+                        <a rel="instragrampage" href="">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </span>
+                    <span style="--i:2;--x:0;--y:-1;">
+                        <a rel="whatsappnum" href="">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                    </span>
+                    <span style="--i:3;--x:0;--y:1;">
+                        <a rel="yahoopage" href="">
+                            <ion-icon name="logo-yahoo"></ion-icon>
+                        </a>
+                    </span>
+                    <span style="--i:4;--x:-1;--y:1;">
+                        <a rel="linkedinpage" href="">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </span>
+                    <span style="--i:5;--x:-1;--y:-1;">
+                        <a ref="discordpage" href="">
+                            <ion-icon name="logo-discord"></ion-icon>
+                        </a>
+                    </span>
+                    <span style="--i:6;--x:1;--y:-1;">
+                        <a rel="githubpage" href="https://github.com/danielaprimacov">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </span>
+                    <span style="--i:7;--x:1;--y:1;">
+                        <a rel="codepenpage" href="">
+                            <ion-icon name="logo-codepen"></ion-icon>
+                        </a>
+                    </span>
+                  </div>
+                  <div class="close"><ion-icon name="close-outline"></ion-icon></div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let navigation = document.querySelector('.navigation');
+        let close = document.querySelector('.close');
+        navigation.onclick = function() {
+            navigation.classList.add('active');
+        }
+        close.onclick = function () {
+            navigation.classList.remove('active');
+        }
+    </script>
+</html>

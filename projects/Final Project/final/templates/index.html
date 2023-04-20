@@ -1,0 +1,205 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Personal Blog
+{% endblock %}
+
+{% block body %}
+
+    <!--Stories Begin-->
+    <div class="stories">
+        <div class="storie_item" data-modal="story_modal">
+            <img class="nav_img" src="static/images/stories/25feb2023.jpg" alt="">
+            <div class="storie_title">Learning to Code</div>
+            <time class="storie_date" datetime="2023-11-25">25.11.2023</time>
+        </div>
+        <div class="storie_item" data-modal="story_modal">
+            <img class="nav_img" src="static/images/stories/2iul2022.jpg" alt="">
+            <div class="storie_title">Morning Sunshine</div>
+            <time class="storie_date" datetime="2022-07-02">02.07.2022</time>
+        </div>
+        <div class="storie_item" data-modal="story_modal">
+            <img class="nav_img" src="static/images/stories/30iun2021.jpg" alt="">
+            <div class="storie_title">In Park relaxing</div>
+            <time class="storie_date" datetime="2021-06-30">30.06.2021</time>
+        </div>
+        <div class="storie_item" data-modal="story_modal">
+            <img class="nav_img" src="static/images/stories/22nov2021.jpg" alt="">
+            <div class="storie_title">Path to the University</div>
+            <time class="storie_date" datetime="2021-11-22">22.11.2021</time>
+        </div>
+    </div> <!-- Stories End-->
+
+
+
+    <!--Add post-->
+    <div class="add_post">
+        <form class="add_post_form" action="/" method="post">
+            <textarea class="add_post_textarea" name="post_text" placeholder="Write Something" data-autoresize></textarea>
+
+            <div class="add_post_form_action">
+                <label class="add_post_file" for="add_post_file">
+                    <input type="file" id="add_post_file">
+                </label>
+                <button class="add_post_send" type="submit">
+                    Send
+                </button>
+            </div>
+        </form>
+    </div>
+    <!--End add Post-->
+
+
+
+    <!-- Articles -->
+    <!--First POST-->
+    <div class="post">
+        <div class="post_content">
+            <p class="post_description">
+                Coding is the process of using programming languages to give instructions to a computer. These instructions power the websites, software, and applications people use every day.
+            </p>
+        </div>
+        <div class="post_footer">
+            <ul class="post_data">
+                <li class="post_data_item">
+                    <time datetime="2023-03-29">29.03.2023</time>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--End First POST-->
+
+    <!--Second POST-->
+    <article class="post">
+        <div class="post_header post_header--preview">
+            <a href="">
+                <img class="post_img" src="static/images/post-1.jpg" alt="How to star to code">
+            </a>
+        </div>
+        <div class="post_content">
+            <h2 class="post_title">
+                <a href="/post">How to start to code?</a>
+            </h2>
+            <p class="post_description">
+                Coding is one of the most valuable skills you can build. If you're searching for "how to learn coding," it might be because you want to advance your career.
+            </p>
+        </div>
+        <div class="post_footer">
+            <ul class="post_data">
+                <li class="post_data_item">
+                    <time datetime="2023-03-31">31.03.2023</time>
+                </li>
+                <li class="post_data_item">
+                    <a href="">Coding</a>
+                </li>
+            </ul>
+            <a class="post_read" href="/post">Read more</a>
+        </div>
+    </article>
+    <!-- End Second Post -->
+
+    <!-- Third Post-->
+    <article class="post">
+        <div class="post_header post_header--preview">
+            <a href="">
+                <img class="post_img" src="static/images/tips.jpg" alt="Tips to learn CP faster">
+            </a>
+        </div>
+        <div class="post_content">
+            <h2 class="post_title">
+                <a href="/learn">Tips to Learn Computer Programming Faster!</a>
+            </h2>
+        </div>
+        <div class="post_footer">
+            <ul class="post_data">
+                <li class="post_data_item">
+                    <time datetime="2023-03-31">31.03.2023</time>
+                </li>
+                <li class="post_data_item">
+                    <a href="">Learn Computer Science</a>
+                </li>
+            </ul>
+            <a class="post_read" href="/learn">Read more</a>
+        </div>
+    </article>
+    <!-- End Third Post-->
+
+    <!-- Fourth Post -->
+    <article class="post">
+        <div class="post_header post_header--preview">
+            <a href="">
+                <img class="post_img" src="static/images/collegues.jpg" alt="">
+            </a>
+        </div>
+        <div class="post_content">
+            <h2 class="post_title">
+                <a href="/bootcamp">About Bootcamps</a>
+            </h2>
+            <p class="post_description">
+                Transforming your professional outlook can be quick and easy thanks to bootcamps. We are talking about specialised intensive training that covers different branches of the digital sector. It lasts for around two months on average, has a practical focus, and seeks to cover employers' demand for labour. In addition, it does not require previous qualifications.
+            </p>
+        </div>
+        <div class="post_footer">
+            <ul class="post_data">
+                <li class="post_data_item">
+                    <time datetime="2023-03-30">30.03.2023</time>
+                </li>
+                <li class="post_data_item">
+                    <a href="">Coding</a>
+                </li>
+            </ul>
+            <a class="post_read" href="/bootcamp">Read more</a>
+        </div>
+    </article>
+    <!-- End Fourth Post -->
+
+    <!-- Star Fifth Post-->
+    <article class="post">
+        <div class="post_header post_header--preview">
+            <a href="">
+                <img class="post_img" src="static/images/framework.png" alt="">
+            </a>
+        </div>
+        <div class="post_content">
+            <h2 class="post_title">
+                <a href="/framework">Web Frameworks. The Best Frameworks to Use</a>
+            </h2>
+            <p class="post_description">
+                Frameworks have become an essential part of web development, as the standards of web applications are always rising, so does the complexity of the technology needed. It’s completely unreasonable to reinvent the wheel for such sophisticated techniques -assuming that you can reinvent all that. That’s why using frameworks endorsed by thousands of developers around the world is a very sensible approach for building rich and interactive web applications. A web app has a backend (server-side) and a frontend (client-side), so we discuss both best Backend frameworks as well as frontend frameworks.
+            </p>
+        </div>
+        <div class="post_footer">
+            <ul class="post_data">
+                <li class="post_data_item">
+                    <time datetime="2023-03-30">30.03.2023</time>
+                </li>
+                <li class="post_data_item">
+                    <a href="">Web Development</a>
+                </li>
+            </ul>
+            <a class="post_read" href="/framework">Read more</a>
+        </div>
+    </article>
+    <!--End Fifth Post-->
+
+    <!-- Navigation -->
+    <ul class="pagination">
+        <li class="pagination_item">
+            <a class="pagination_link" href="#">&lt;</a>
+        </li>
+        <li class="pagination_item">
+            <a class="pagination_link active" href="">1</a>
+        </li>
+        <li class="pagination_item">
+            <a class="pagination_link" href="">2</a>
+        </li>
+        <li class="pagination_item">
+            <a class="pagination_link" href="">3</a>
+        </li>
+        <li class="pagination_item">
+            <a class="pagination_link" href="">&gt;</a>
+        </li>
+    </ul>
+    <!-- End Navigation -->
+
+{% endblock %}
